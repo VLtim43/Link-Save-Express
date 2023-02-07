@@ -1,0 +1,11 @@
+GET http://localhost:4040/links
+
+###
+POST http://localhost:4040/link/new
+Content-Type: application/json
+
+{
+    "text": "test 2",
+    "label": "this is the label"
+}
+
