@@ -82,4 +82,11 @@ app.put("/link/edit/:id", async (req, res) => {
   if (!link) return res.status(404).send("Link not found.");
 
   res.json(link);
+})
+
+
+//delete All links
+app.post("/link/deleteAll/", async (req, res) => {
+  const link = await Link.deleteMany({ text: "test 3" }); 
+  res.json(link);
 });

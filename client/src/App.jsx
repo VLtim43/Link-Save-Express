@@ -39,7 +39,6 @@ import axios from "axios";
 function App() {
 
   const [links, setlinks] = useState([]);
-  const [text, setText] = useState("");
 
 
   //fetch the links from the api
