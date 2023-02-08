@@ -1,11 +1,22 @@
-GET http://localhost:4040/links
+GET http://localhost:3000/links
 
 ###
-POST http://localhost:4040/link/new
+POST http://localhost:3000/link/new
 Content-Type: application/json
 
 {
-    "text": "test 2",
-    "label": "this is the label"
+    "text": "test",
+    "label": "label",
+    "tag": "tag"
 }
 
+###
+DELETE http://localhost:3000/link/delete/63e3dfe0a49dfe4c5a21c4d9
+
+###
+PUT http://localhost:3000/link/edit/63e3e08a382f2f0469c42192
+Content-Type: application/json
+
+{
+    "text": "test 3"
+}
