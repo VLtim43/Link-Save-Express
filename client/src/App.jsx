@@ -1,36 +1,3 @@
-/* import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-function App() {
-  const [links, setlinks] = useState();
-
-
-  const getLinks = () => {
-    axios.get("http://localhost:3000/links")
-      .then((res) => {
-        console.log(links)
-        setlinks(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    getLinks();
-  }, []);
-
-  return (
-    <div> 
-    
-    </div>
-  );
-}
-
-
-
-
-export default App; */
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
@@ -45,7 +12,7 @@ function App() {
   const getLinks = () => {
     axios.get("http://localhost:3000/links")
       .then((res) => {
-        console.log(links)
+        console.log("data fetched")
         setlinks(res.data);
       })
       .catch((err) => {
@@ -61,8 +28,7 @@ function App() {
 
 
   return (
-
-
+    
     <div className="links">
       {links.map((todo) => (
 
