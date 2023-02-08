@@ -86,7 +86,7 @@ app.put("/link/edit/:id", async (req, res) => {
 
 
 //delete All links
-app.post("/link/deleteAll/", async (req, res) => {
-  const link = await Link.deleteMany({ text: "test 3" }); 
+app.delete("/link/deleteAll/", async (req, res) => {
+  const link = await Link.deleteMany({}); 
   res.json(link);
 });
