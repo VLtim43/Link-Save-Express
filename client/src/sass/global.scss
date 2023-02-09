@@ -1,4 +1,5 @@
-@import "../components/SideBar/Sidebar.style.scss";
+/* @import "../components/SideBar/Sidebar.style.scss";
+ */
 
 body {
     margin: 0 !important;
@@ -26,3 +27,25 @@ body {
 }
 
 
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main {
+    width: 40rem;
+    height: 100vh;
+    background-color: red;
+}
+
+.sidebar {
+    width: 15rem;
+    height: 100vh;
+    background-color: green;
+    
+    position:fixed;
+    left:0px;
+    top:0px;
+}

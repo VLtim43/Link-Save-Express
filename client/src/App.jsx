@@ -1,11 +1,11 @@
-import { Sidebar } from "./components/SideBar/Sidebar"
 
 
 function App() {
   return (
-    <section className="App">
-     
-    </section>
+    <div className="App">
+    <div className="sidebar">a</div>
+     <div className="main">a</div>
+    </div>
   )
 }
 
