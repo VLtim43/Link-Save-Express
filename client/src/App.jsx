@@ -1,9 +1,9 @@
-
+import { SideBar } from "./components/SideBar"
 
 function App() {
   return (
     <div className="App">
-    <div className="sidebar">a</div>
+     <SideBar/>
      <div className="main">a</div>
     </div>
   )

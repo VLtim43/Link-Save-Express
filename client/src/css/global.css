@@ -1,5 +1,12 @@
-/* @import "../components/SideBar/Sidebar.style.scss";
- */
+.sidebar {
+  width: 15rem;
+  height: 100vh;
+  background-color: green;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
 body {
   margin: 0 !important;
   padding: 0 !important;
@@ -31,13 +38,4 @@ body {
   width: 40rem;
   height: 100vh;
   background-color: red;
-}
-
-.sidebar {
-  width: 15rem;
-  height: 100vh;
-  background-color: green;
-  position: fixed;
-  left: 0px;
-  top: 0px;
 }/*# sourceMappingURL=global.css.map */
