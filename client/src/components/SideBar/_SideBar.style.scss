@@ -1,0 +1,21 @@
+@use "../../sass/variables"as *;
+
+.sidebar-container {
+    height: 100vh;
+    width: 17%;
+    background-color: darken($dark6, $amount: 0.5);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+
+    .sidebar {
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+        height: 82vh;
+        background-color: red;
+        padding: 2rem;
+        border-right: 4px solid $dark9;
+    }
+
+}

@@ -1,5 +1,6 @@
 @use "./variables"as *;
-@import "../components/SideBar.style.scss";
+
+@import "../components/SideBar/SideBar.style";
 
 
 body {
@@ -38,5 +39,4 @@ body {
     height: 100vh;
 
     width: 40rem;
-    background-color: $dark4;
 }
