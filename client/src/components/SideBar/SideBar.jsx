@@ -1,10 +1,13 @@
 import React from 'react'
-
-export const SideBar = () => {
+import { DotsNine } from "phosphor-react";
+export const SideBar = ({ title }) => {
     return (
         <div className="sidebar-container">
             <div className="sidebar">
-                <p>a</p>
+                <div className="header">
+                    <DotsNine weight="bold" />
+                    <h2>{title}</h2>
+                </div>
             </div>
         </div>
     )

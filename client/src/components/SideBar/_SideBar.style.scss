@@ -12,10 +12,39 @@
     .sidebar {
         margin-top: 5vh;
         margin-bottom: 2vh;
-        height: 82vh;
-        background-color: red;
-        padding: 2rem;
+        height: 90vh;
+        padding-left: 2rem;
+        padding-right: 2rem;
         border-right: 4px solid $dark9;
     }
 
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+
+    svg {
+        @media only screen and (min-width: $monitor1) {
+            & {
+                font-size: 50px;
+                padding-right: 0.8rem;
+            }
+        }
+
+    }
+
+    h2 {
+        @media only screen and (min-width: $monitor1) {
+            & {
+                font-size: 1.9rem;
+            }
+        }
+        
+        margin: 0;
+        padding-bottom: 5px;
+        font-size: 2rem;
+        width: 100%;
+    }
 }

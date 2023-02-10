@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <SideBar />
+      <SideBar title="Project" />
       <div className="main">
         {links.map((link) => (
           <p key={link._id}>{link.text}</p>
