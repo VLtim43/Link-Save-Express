@@ -31,9 +31,9 @@ function App() {
     <div className="App">
       <SideBar title="Project" />
       <div className="main">
-        {/*  {links.map((link) => (
-          <p key={link._id}>{link.text}</p>
-        ))} */}
+         {links.map((link) => (
+          <p key={link._id}>{link.timestamp}</p>
+        ))}
 
         
       </div>

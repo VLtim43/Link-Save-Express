@@ -35,8 +35,8 @@ const LinkSchema = new Schema({
     type: String,
     required: false,
   },
-  tag: {
-    type: String,
+  tags: {
+    type: Array,
     required: false,
   },
   timestamp: {
@@ -59,7 +59,7 @@ app.post("/link/new", (req, res) => {
   const link = new Link({
     text: req.body.text,
     label: req.body.label,
-    tag: req.body.tag,
+    tags: req.body.tags
   });
 
   link.save();

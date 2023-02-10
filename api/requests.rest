@@ -5,9 +5,9 @@ POST http://localhost:3000/link/new
 Content-Type: application/json
 
 {
-    "text": "test",
-    "label": "label",
-    "tag": "tag"
+    "text": "test 2",
+    "label": "label 2",
+    "tags": ["css", "javascript", "mongoose", "node"]
 }
 
 ###
