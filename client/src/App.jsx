@@ -30,9 +30,13 @@ function App() {
     <div className="App">
       <SideBar title="Project" />
       <div className="main">
-        {links.map((link) => (
+       {/*  {links.map((link) => (
           <p key={link._id}>{link.text}</p>
-        ))}
+        ))} */}
+
+        <div className="test">
+          a
+        </div>
       </div>
     </div>
   )

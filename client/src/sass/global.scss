@@ -1,6 +1,8 @@
 @use "./variables"as *;
 
 @import "../components/SideBar/SideBar.style";
+@import "../components/LinkComponent/LinkComponent.style.scss";
+
 
 
 body {
@@ -38,6 +40,16 @@ body {
 .main {
     height: 100vh;
 
-    width: 40rem;
-    background-color: $dark7;
+    @media only screen and (min-width: $monitor1) {
+        & {
+            width: 40rem;
+        }
+    }
+
+    @media only screen and (min-width: $monitor2) {
+        & {
+            width: 65rem;
+        }
+    }
 }
+
