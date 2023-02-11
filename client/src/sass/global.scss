@@ -2,7 +2,8 @@
 
 @import "../components/SideBar/SideBar.style";
 @import "../components/LinkComponent/LinkComponent.style";
-
+@import "../components/ScrollArea/ScrollArea.style";
+@import "../components/HeaderComponent/HeaderComponent.style";
 
 
 body {
@@ -33,23 +34,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 
 
 }
 
 .main {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     @media only screen and (min-width: $monitor1) {
         & {
-            width: 40rem;
+            margin-left: 8rem;
+            width: 60%;
         }
     }
 
     @media only screen and (min-width: $monitor2) {
         & {
-            width: 60rem;
+            width: 70%;
         }
     }
 }
 
+
+
+
+.scrollabe-area {}

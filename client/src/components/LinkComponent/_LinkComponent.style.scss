@@ -3,17 +3,19 @@
 .component-container {
     margin-top: 5px;
     border-radius: 3px;
-    background-color: darkmagenta;
-    padding: 10px;
+    background-color: $dark6;
+    padding: 5px;
 
 
     p{
         margin: 0;
         text-transform: capitalize;
+        font-size: 14px;
     }
 
     a {
         text-decoration: none;
         color: white;
+        font-size: 12px;
     }
 }

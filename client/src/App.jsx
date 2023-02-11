@@ -1,8 +1,7 @@
 import { SideBar } from "./components/SideBar/SideBar"
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { LinkComponent } from "./components/LinkComponent/LinkComponent";
-
+import { ScrollAreaComp } from "./components/ScrollArea/ScrollArea";
 
 function App() {
 
@@ -31,11 +30,13 @@ function App() {
   return (
     <div className="App">
       <SideBar title="Project" />
-      <div className="main">
-        {links.map((link) => (
-          <LinkComponent text={link.text} label={link.label}/>
-        ))}
 
+      <div className="main">
+        <header className="header"/>
+
+         <div className="scrollabe-area">
+          <ScrollAreaComp linkArray={links}/> 
+         </div>
       </div>
     </div>
   )

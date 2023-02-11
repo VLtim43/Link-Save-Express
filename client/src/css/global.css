@@ -4,8 +4,8 @@
   user-select: none;
   height: 100vh;
   width: 17%;
-  background-color: #191a1d;
-  position: absolute;
+  background-color: #1A1B1E;
+  position: fixed;
   left: 0px;
   top: 0px;
 }
@@ -56,16 +56,84 @@
 .component-container {
   margin-top: 5px;
   border-radius: 3px;
-  background-color: darkmagenta;
-  padding: 10px;
+  background-color: #1A1B1E;
+  padding: 5px;
 }
 .component-container p {
   margin: 0;
   text-transform: capitalize;
+  font-size: 14px;
 }
 .component-container a {
   text-decoration: none;
   color: white;
+  font-size: 12px;
+}
+
+.ScrollAreaRoot {
+  height: 150vh;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #1A1B1E;
+}
+
+.ScrollAreaViewport {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.ScrollAreaScrollbar {
+  display: flex;
+  /* ensures no selection */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  /* disable browser handling of all panning and zooming gestures on touch devices */
+  touch-action: none;
+  padding: 2px;
+}
+
+.ScrollAreaScrollbar[data-orientation=horizontal] {
+  flex-direction: column;
+}
+
+.ScrollAreaThumb {
+  flex: 1;
+  position: relative;
+}
+
+/* increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+.ScrollAreaThumb::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.Text {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.Tag {
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  border-bottom: 4px solid #0b0c0c;
+  margin-bottom: 1rem;
 }
 
 body {
@@ -91,18 +159,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 .main {
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 @media only screen and (min-width: 1355px) {
   .main {
-    width: 40rem;
+    margin-left: 8rem;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 1920px) {
   .main {
-    width: 60rem;
+    width: 70%;
   }
 }/*# sourceMappingURL=global.css.map */
