@@ -53,6 +53,21 @@
   }
 }
 
+.component-container {
+  margin-top: 5px;
+  border-radius: 3px;
+  background-color: darkmagenta;
+  padding: 10px;
+}
+.component-container p {
+  margin: 0;
+  text-transform: capitalize;
+}
+.component-container a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 0;

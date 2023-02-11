@@ -1,0 +1,19 @@
+@use "../../sass/variables"as *;
+
+.component-container {
+    margin-top: 5px;
+    border-radius: 3px;
+    background-color: darkmagenta;
+    padding: 10px;
+
+
+    p{
+        margin: 0;
+        text-transform: capitalize;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

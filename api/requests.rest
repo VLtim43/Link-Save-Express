@@ -5,8 +5,8 @@ POST http://localhost:3000/link/new
 Content-Type: application/json
 
 {
-    "text": "test 2",
-    "label": "label 2",
+    "text": "https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168",
+    "label": "deviantart link",
     "tags": ["css", "javascript", "mongoose", "node"]
 }
 

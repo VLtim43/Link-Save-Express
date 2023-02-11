@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"LinkComponent.style.css"}
+{"version":3,"sources":["../components/LinkComponent/LinkComponent.style.scss","LinkComponent.style.css"],"names":[],"mappings":"AAEA;EACI,kBAAA;EACA,6BAAA;ACDJ","file":"LinkComponent.style.css"}

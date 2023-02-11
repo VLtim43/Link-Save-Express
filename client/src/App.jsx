@@ -1,6 +1,7 @@
 import { SideBar } from "./components/SideBar/SideBar"
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { LinkComponent } from "./components/LinkComponent/LinkComponent";
 
 
 function App() {
@@ -31,11 +32,10 @@ function App() {
     <div className="App">
       <SideBar title="Project" />
       <div className="main">
-         {links.map((link) => (
-          <p key={link._id}>{link.timestamp}</p>
+        {links.map((link) => (
+          <LinkComponent text={link.text} label={link.label}/>
         ))}
 
-        
       </div>
     </div>
   )
