@@ -62,44 +62,46 @@
 }
 
 .component-container {
+  height: 2.8rem;
+  transition: background-color 0.5s ease-in-out;
   margin-top: 5px;
   border-radius: 3px;
   background-color: #1A1B1E;
   padding: 5px;
 }
-@media only screen and (min-width: 1355px) {
-  .component-container p {
-    margin: 0;
-    text-transform: capitalize;
-    font-size: 14px;
-  }
-  .component-container a {
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-  }
+.component-container p {
+  color: rgba(255, 255, 255, 0.8705882353);
+  font-weight: bold;
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 14px;
 }
-@media only screen and (min-width: 1920px) {
-  .component-container p {
-    margin: 0;
-    text-transform: capitalize;
-    font-size: 14px;
-  }
-  .component-container a {
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-  }
+.component-container p:hover {
+  color: rgba(242, 242, 242, 0.8705882353);
+}
+.component-container a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8705882353);
+  font-size: 15px;
+}
+.component-container a:hover {
+  color: rgba(242, 242, 242, 0.8705882353);
+}
+
+.label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.component-container:hover {
+  background-color: #26272c;
 }
 
 .ScrollAreaViewport {
+  width: 60vw;
   height: 130vh;
   border-radius: inherit;
-}
-@media only screen and (min-width: 1920px) {
-  .ScrollAreaViewport {
-    width: 60vw;
-  }
 }
 
 .ScrollAreaScrollbar {

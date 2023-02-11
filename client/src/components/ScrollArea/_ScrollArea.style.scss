@@ -3,19 +3,8 @@
 
 
 .ScrollAreaViewport {
+  width: 60vw;
 
-  @media only screen and (min-width: $monitor1) {
-    & {
-      
-    } 
-  }
-
-  @media only screen and (min-width: $monitor2) {
-    & {
-      width: 60vw;
-    }
-
-  }
 
   height: 130vh;
   border-radius: inherit;

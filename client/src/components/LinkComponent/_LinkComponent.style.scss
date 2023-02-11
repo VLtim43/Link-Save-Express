@@ -1,39 +1,44 @@
 @use "../../sass/variables"as *;
 
 .component-container {
+    height: 2.8rem;
+    transition: background-color 0.5s ease-in-out;
     margin-top: 5px;
     border-radius: 3px;
     background-color: $dark6;
     padding: 5px;
 
-
-    @media only screen and (min-width: $monitor1) {
-        p {
-            margin: 0;
-            text-transform: capitalize;
-            font-size: 14px;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 15px;
-        }
+    p {
+        color: $white1;
+        font-weight: bold;
+        margin: 0;
+        text-transform: capitalize;
+        font-size: 14px;
     }
 
-    @media only screen and (min-width: $monitor2) {
-
-        p {
-            margin: 0;
-            text-transform: capitalize;
-            font-size: 14px;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 15px;
-        }
-
+    p:hover {
+        color: darken($white1, $amount: 5);
     }
+
+    a {
+        text-decoration: none;
+        color: $white1;
+        font-size: 15px;
+    }
+
+    a:hover {
+        color: darken($white1, $amount: 5);
+    }
+
+}
+
+.label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.component-container:hover {
+    background-color: lighten($dark6, $amount: 5);
 }
