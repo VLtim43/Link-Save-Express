@@ -7,15 +7,33 @@
     padding: 5px;
 
 
-    p{
-        margin: 0;
-        text-transform: capitalize;
-        font-size: 14px;
+    @media only screen and (min-width: $monitor1) {
+        p {
+            margin: 0;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
     }
 
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 12px;
+    @media only screen and (min-width: $monitor2) {
+
+        p {
+            margin: 0;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
     }
 }

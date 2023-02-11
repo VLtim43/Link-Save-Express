@@ -22,6 +22,15 @@
         padding-left: 2rem;
         padding-right: 2rem;
         border-right: 4px solid $dark9;
+
+        @media only screen and (min-width: $monitor1) {
+            & {
+                margin-top: 8vh;
+                font-size: 50px;
+                padding-right: 0.8rem;
+                height: 85vh;
+            }
+        }
     }
 
 }

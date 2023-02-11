@@ -48,18 +48,16 @@ body {
     @media only screen and (min-width: $monitor1) {
         & {
             margin-left: 8rem;
-            width: 60%;
+            
         }
     }
 
     @media only screen and (min-width: $monitor2) {
         & {
-            width: 70%;
+            width: 60%;
         }
     }
 }
 
 
 
-
-.scrollabe-area {}
