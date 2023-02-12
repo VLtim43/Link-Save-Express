@@ -5,9 +5,9 @@ POST http://localhost:3000/link/new
 Content-Type: application/json
 
 {
-    "text": "https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168https://www.deviantart.com/wdghk/art/Basal-Ceratosaur-Temporal-and-Geographic-Range-948946168",
-    "label": "deviantart link",
-    "tags": ["css", "javascript", "mongoose", "node"]
+    "text": "https://translate.google.com/?hl=pt-BR",
+    "label": "Google Translator",
+    "tags": []
 }
 
 ###
@@ -19,7 +19,7 @@ DELETE http://localhost:3000/link/deleteALL
 
 
 ###
-PUT http://localhost:3000/link/edit/63e3e08a382f2f0469c42192
+PUT http://localhost:3000/link/edit/63e82919d70db91c7041ddf7
 Content-Type: application/json
 
 {
