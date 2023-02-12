@@ -1,10 +1,13 @@
 import { SideBar } from "./components/SideBar/SideBar"
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { ScrollAreaComp } from "./components/ScrollArea/ScrollArea";
 
+export const AppContext = createContext()
+
 function App() {
 
+  const [linkEffect, setLinkEffect] = useState(true);
   const [links, setlinks] = useState([]);
 
 
@@ -12,7 +15,6 @@ function App() {
   const getLinks = () => {
     axios.get("http://localhost:3000/links")
       .then((res) => {
-        console.log(links)
         setlinks(res.data);
       })
       .catch((err) => {
@@ -22,9 +24,22 @@ function App() {
   //useEffect
   useEffect(() => {
     getLinks();
-    console.log(links);
-  }, []);
+  }, [linkEffect]);
 
+  //create
+  const createLink = async (text, label, tags) => {
+    try {
+      const response = await axios.post('http://localhost:3000/link/new', {
+        text: text,
+        label: label,
+        tags: tags
+      });
+      setLinkEffect(!linkEffect)
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 
   return (
@@ -32,11 +47,13 @@ function App() {
       <SideBar title="Project" />
 
       <div className="main">
-        <header className="header"/>
-
-         <div className="scrollabe-area">
-          <ScrollAreaComp linkArray={links}/> 
-         </div>
+        <AppContext.Provider value={[linkEffect, setLinkEffect]}>
+          <header className="header" />
+          <button onClick={() => createLink("https://translate.google.com/?hl=pt-BR", "Google Translator", [])}>send</button>
+          <div className="scrollabe-area">
+            <ScrollAreaComp linkArray={links} />
+          </div>
+        </AppContext.Provider>
       </div>
     </div>
   )

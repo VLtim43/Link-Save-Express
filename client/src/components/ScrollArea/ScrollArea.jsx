@@ -8,7 +8,7 @@ export const ScrollAreaComp = ({ linkArray }) => (
     <ScrollArea.Root className="ScrollAreaRoot">
         <ScrollArea.Viewport className="ScrollAreaViewport">
             {linkArray.map((link) => (
-                <LinkComponent text={link.text} label={link.label} />
+                <LinkComponent text={link.text} label={link.label} key={link._id} id={link._id}/>
             ))}
         </ScrollArea.Viewport>
         <ScrollArea.Scrollbar className="ScrollAreaScrollbar" orientation="vertical">
