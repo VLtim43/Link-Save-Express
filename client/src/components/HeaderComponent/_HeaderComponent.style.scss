@@ -1,12 +1,12 @@
 @use "../../sass/variables"as *;
 
 header {
-    
+
     height: 110px;
     border-bottom: 4px solid $dark9;
     margin-bottom: 1rem;
 
-    
+
     @media only screen and (min-width: $monitor1) {
         & {
             height: 110px;
@@ -20,5 +20,40 @@ header {
             width: 100%;
         }
     }
+
+}
+
+form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+input {
+    height: 1.5rem;
+}
+
+
+.url-input {
+    flex: 3;
+
+    input {
+        width: 90%;
+    }
+}
+
+.label-input {
+    flex: 1;
+
+    input {
+        width: 90%;
+    }
+}
+
+.send-button {
+    flex: 0.5;
+    height: 2rem;
 
 }

@@ -2,6 +2,7 @@ import { SideBar } from "./components/SideBar/SideBar"
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { ScrollAreaComp } from "./components/ScrollArea/ScrollArea";
+import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent";
 
 export const AppContext = createContext()
 
@@ -48,8 +49,8 @@ function App() {
 
       <div className="main">
         <AppContext.Provider value={[linkEffect, setLinkEffect]}>
-          <header className="header" />
-          <button onClick={() => createLink("https://translate.google.com/?hl=pt-BR", "Google Translator", [])}>send</button>
+          <HeaderComponent createLink={createLink}/>
+          {/* <button onClick={() => createLink("https://translate.google.com/?hl=pt-BR", "Google Translator", [])}>send</button> */}
           <div className="scrollabe-area">
             <ScrollAreaComp linkArray={links} />
           </div>

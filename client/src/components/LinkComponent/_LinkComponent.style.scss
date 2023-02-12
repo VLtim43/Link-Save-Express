@@ -1,7 +1,7 @@
 @use "../../sass/variables"as *;
 
 .component-container {
-    
+    border-bottom: 2px solid $dark4;
     margin-right: 10px;
     height: 2.8rem;
     transition: background-color 0.5s ease-in-out;
@@ -30,7 +30,7 @@
         font-size: 15px;
         padding-bottom: 5px;
 
-        border-bottom: 2px solid $dark4;
+        
     }
 
     a:hover {
