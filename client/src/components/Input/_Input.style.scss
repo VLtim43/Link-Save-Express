@@ -1,0 +1,36 @@
+@use "../../sass/variables"as *;
+
+input {
+    background-color: $dark6;
+    border-radius: 5px;
+    border: 2px solid $dark3;
+   
+    padding-left: 10px;
+    height: 2rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    color: $dark1; 
+    font-size: 18px; 
+}
+
+.url-input {
+    flex: 3;
+
+    input {
+        width: 95%;
+    }
+}
+
+.label-input {
+    flex: 1;
+    text-transform: capitalize;
+
+    input {
+        width: 90%;
+    }
+}

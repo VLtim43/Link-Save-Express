@@ -149,26 +149,57 @@ form {
 }
 
 input {
-  height: 1.5rem;
+  background-color: #1A1B1E;
+  border-radius: 5px;
+  border: 2px solid #5c5f66;
+  padding-left: 10px;
+  height: 2rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=text] {
+  color: #C1C2C5;
+  font-size: 18px;
 }
 
 .url-input {
   flex: 3;
 }
 .url-input input {
-  width: 90%;
+  width: 95%;
 }
 
 .label-input {
   flex: 1;
+  text-transform: capitalize;
 }
 .label-input input {
   width: 90%;
 }
 
-.send-button {
+button {
   flex: 0.5;
-  height: 2rem;
+  height: 2.43rem;
+  border: 2px solid #5c5f66;
+  background-color: #1A1B1E;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.on {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8705882353);
+  background-color: #5c5f66;
+  border: 2px solid rgba(255, 255, 255, 0.8705882353);
+  transition: color 0.3s ease;
+}
+
+.off {
+  transition: color 0.3s ease;
+  cursor: not-allowed;
 }
 
 body {

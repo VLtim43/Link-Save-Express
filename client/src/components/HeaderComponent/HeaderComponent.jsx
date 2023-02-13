@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useContext } from "react";
+import { Button } from '../Button/Button';
+import { Input } from '../Input/Input';
 
 export const HeaderComponent = (props) => {
   const [text, setText] = useState("");
@@ -16,13 +18,11 @@ export const HeaderComponent = (props) => {
         setText("");
         setLabel("");
         }}>
-        <div className="url-input">
-          <input type="text"  onChange={(e) => setText(e.target.value)}   value={text} />
-        </div>
-        <div className="label-input">
-          <input type="text"  onChange={(e) => setLabel(e.target.value)} value={label} />
-        </div>
-        <button disabled={!text} className="send-button" type="submit">Submit</button>
+        
+        <Input name={"url-input"} setText={setText} value={text}/>
+        <Input name={"label-input"} setText={setLabel} value={label}/>
+
+        <Button buttontext={"Submit"} text={text}/>
       </form>
 
     </header>

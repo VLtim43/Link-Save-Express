@@ -1,0 +1,29 @@
+@use "../../sass/variables"as *;
+
+button {
+    flex: 0.5;
+    height: 2.43rem;
+    border: 2px solid $dark3;
+    background-color: $dark6;
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+}
+
+button:hover {
+
+}
+
+.on {
+    cursor: pointer;
+    color: $white1;
+    background-color: $dark3;
+    border: 2px solid $white1;
+
+    transition: color 0.3s ease; 
+}
+
+.off {
+    transition: color 0.3s ease; 
+    cursor: not-allowed;
+}

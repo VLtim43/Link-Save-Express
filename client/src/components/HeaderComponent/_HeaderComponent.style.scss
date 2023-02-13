@@ -31,29 +31,5 @@ form {
     flex-direction: row;
 }
 
-input {
-    height: 1.5rem;
-}
 
 
-.url-input {
-    flex: 3;
-
-    input {
-        width: 90%;
-    }
-}
-
-.label-input {
-    flex: 1;
-
-    input {
-        width: 90%;
-    }
-}
-
-.send-button {
-    flex: 0.5;
-    height: 2rem;
-
-}
