@@ -45,17 +45,16 @@ function App() {
 
   return (
     <div className="App">
+      <AppContext.Provider value={[linkEffect, setLinkEffect]}>
       <SideBar title="Project" />
 
       <div className="main">
-        <AppContext.Provider value={[linkEffect, setLinkEffect]}>
-          <HeaderComponent createLink={createLink}/>
-          {/* <button onClick={() => createLink("https://translate.google.com/?hl=pt-BR", "Google Translator", [])}>send</button> */}
+          <HeaderComponent createLink={createLink} />
           <div className="scrollabe-area">
             <ScrollAreaComp linkArray={links} />
           </div>
-        </AppContext.Provider>
       </div>
+      </AppContext.Provider>
     </div>
   )
 }
