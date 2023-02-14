@@ -4,9 +4,23 @@ input {
     background-color: $dark6;
     border-radius: 5px;
     border: 2px solid $dark3;
-   
+
     padding-left: 10px;
     height: 2rem;
+}
+
+.fake-input {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+
+    
 }
 
 input:focus {
@@ -14,8 +28,8 @@ input:focus {
 }
 
 input[type="text"] {
-    color: $dark1; 
-    font-size: 18px; 
+    color: $dark1;
+    font-size: 18px;
 }
 
 .url-input {

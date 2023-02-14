@@ -132,6 +132,14 @@ span {
   background-color: #26272c;
 }
 
+#true {
+  background-color: red;
+}
+
+#false {
+  background-color: green;
+}
+
 .ScrollAreaViewport {
   width: 60vw;
   height: 80vh;
@@ -184,6 +192,18 @@ input {
   border: 2px solid #5c5f66;
   padding-left: 10px;
   height: 2rem;
+}
+
+.fake-input {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  width: 80%;
 }
 
 input:focus {
