@@ -233,10 +233,6 @@ button {
 }
 
 /* reset */
-button {
-  all: unset;
-}
-
 .AlertDialogOverlay {
   background-color: var(--blackA9);
   position: fixed;
@@ -278,6 +274,7 @@ button {
 }
 
 .Button {
+  all: unset;
   display: inline-flex;
   align-items: center;
   justify-content: center;

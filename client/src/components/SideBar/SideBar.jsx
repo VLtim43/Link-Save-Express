@@ -11,8 +11,7 @@ export const SideBar = ({ title }) => {
                     <DotsNine weight="bold" />
                     <h2>{title}</h2>
                 </div>
-
-
+                
                 <div className='delete'>
                     <Alert/>
                 </div>
