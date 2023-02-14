@@ -2,21 +2,14 @@ import { XSquare, Pencil } from 'phosphor-react';
 import React from 'react'
 import { AppContext } from '../../App';
 import { useState, useEffect, useContext } from 'react';
-import { FakeInput } from '../FakeInput/FakeInput';
 import axios from 'axios';
+import { LinkContext } from '../LinkWrapper/LinkWrapper';
 
 
 export const LinkComponent = ({ text, label, id }) => {
   const [linkEffect, setLinkEffect] = useContext(AppContext);
-  const [test, useTest] = useState(false)
+  const [editing, setEditing] = useContext(LinkContext);
 
-  
-
-
-  //edit given link
-  const editLink = () => {
-
-  }
 
   //delete link
   const deleteLink = async (id) => {
@@ -30,45 +23,21 @@ export const LinkComponent = ({ text, label, id }) => {
     }
   };
 
-
-
-  if(test) {
     return (
       <div className="component-container">
         <div className="text-container">
           <div className='label'>
             <p>{label}</p>
-            <div id={test ? "true" : "false"}>
-              <Pencil size={20} onClick={() => useTest(!test)} />
+            <div >
+              <Pencil size={20} onClick={() => setEditing(!editing)} />
               <XSquare size={20} onClick={() => deleteLink(id)} />
             </div>
           </div>
           <div>
-            <FakeInput text={text}/>
+            <div>{"• " + text}</div>
           </div>
         </div>
       </div>
     )
-  
-  } else {
-    return (
-      <div className="component-container">
-        <div className="text-container">
-          <div className='label'>
-            <p>{label}</p>
-            <div id={test ? "true" : "false"}>
-              <Pencil size={20} onClick={() => useTest(!test)} />
-              <XSquare size={20} onClick={() => deleteLink(id)} />
-            </div>
-          </div>
-          <div>
-            <p>{text}</p>
-          </div>
-        </div>
-      </div>
-    )
-  
-  }
  
-
 }

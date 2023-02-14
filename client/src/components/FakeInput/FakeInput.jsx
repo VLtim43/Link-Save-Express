@@ -1,48 +1,45 @@
+import { PaperPlane, Pencil } from 'phosphor-react';
 import React from 'react'
-import { useState, useEffect, useContext } from 'react';
-
-/* function TruncateLink(link) {
-    
-    useEffect(() => {
-        const handleResize = () => {
-            const maxLength = window.innerWidth < 1800 ? 105 : 150;
-            setTruncatedLink(link.length > maxLength
-                ? "• " + link.substr(0, maxLength) + '...'
-                : "• " + link
-            );
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [link]);
-}
- */
+import { AppContext } from '../../App';
+import { useState, useEffect, useContext , useRef} from 'react';
+import axios from 'axios';
+import { LinkContext } from '../LinkWrapper/LinkWrapper';
 
 
-export const FakeInput = ({ text }) => {
-    const [truncatedLink, setTruncatedLink] = useState(text);
-    const [inputValue, setInputValue] = useState(truncatedLink);
+export const FakeInput = ({ text, label, id }) => {
+  const ref = useRef(null);
+  
+  const [linkEffect, setLinkEffect] = useContext(AppContext);
+  const [editing, setEditing] = useContext(LinkContext);
 
-    //truncates long links
-    useEffect(() => {
-        const handleResize = () => {
-            const maxLength = window.innerWidth < 1800 ? 105 : 150;
-            setTruncatedLink(text.length > maxLength
-                ? "• " + text.substr(0, maxLength) + '...'
-                : "• " + text
-            );
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [text]);
-
-
-    const handleInputChange = (event) => {
-        setInputValue(event.target.value);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
+  }, []);
+
+  function handleClickOutside(event) {
+    if (ref.current && !ref.current.contains(event.target)) {
+        setEditing(!editing)
+    }
+  }
 
     return (
-        <input className='fake-input' type="text" value={inputValue} onChange={handleInputChange} />
+      <div className="fake-component-container" ref={ref}>
+        <div className="text-container">
+          <div className='label'>
+            <input type="text" value={label}/>
+            <div >
+              <Pencil size={20} onClick={() => setEditing(!editing)} />
+              <PaperPlane size={20} onClick={() => deleteLink(id)} />
+            </div>
+          </div>
+          <div>
+          <input type="text" value={text}/>
+          </div>
+        </div>
+      </div>
     )
+ 
 }

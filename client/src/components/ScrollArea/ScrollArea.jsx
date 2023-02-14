@@ -2,13 +2,14 @@ import React from 'react';
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 
 import { LinkComponent } from "../LinkComponent/LinkComponent"
+import { LinkWrapper } from '../LinkWrapper/LinkWrapper';
 
 
 export const ScrollAreaComp = ({ linkArray }) => (
     <ScrollArea.Root className="ScrollAreaRoot">
         <ScrollArea.Viewport className="ScrollAreaViewport">
             {linkArray.map((link) => (
-                <LinkComponent text={link.text} label={link.label} key={link._id} id={link._id}/>
+                <LinkWrapper link={link}/>
             ))}
         </ScrollArea.Viewport>
         <ScrollArea.Scrollbar className="ScrollAreaScrollbar" orientation="vertical">
