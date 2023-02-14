@@ -12,6 +12,11 @@ export const FakeInput = ({ text, label, id }) => {
   const [linkEffect, setLinkEffect] = useContext(AppContext);
   const [editing, setEditing] = useContext(LinkContext);
 
+  const [inputValue, setInputValue] = useState(text);
+  const [labelValue, setLabelValue] = useState(label);
+
+ 
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -25,18 +30,20 @@ export const FakeInput = ({ text, label, id }) => {
     }
   }
 
+ 
+
     return (
       <div className="fake-component-container" ref={ref}>
         <div className="text-container">
           <div className='label'>
-            <input type="text" value={label}/>
+            <input type="text" value={labelValue} onChange={event => setLabelValue(event.target.value)}/>
             <div >
               <Pencil size={20} onClick={() => setEditing(!editing)} />
               <PaperPlane size={20} onClick={() => deleteLink(id)} />
             </div>
           </div>
           <div>
-          <input type="text" value={text}/>
+          <input type="text" value={inputValue} onChange={event => setInputValue(event.target.value)}/>
           </div>
         </div>
       </div>

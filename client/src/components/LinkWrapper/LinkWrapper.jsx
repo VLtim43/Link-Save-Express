@@ -26,8 +26,6 @@ export const LinkWrapper = ({ link }) => {
         return truncatedLink
     }
 
-
-
     const [editing, setEditing] = useState(true)
     return (
         <LinkContext.Provider value={[editing, setEditing]}>
