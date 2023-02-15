@@ -1,7 +1,7 @@
-GET http://localhost:3000/links
+GET https://link-api-gqiv.onrender.com/links
 
 ###
-POST http://localhost:3000/link/new
+POST https://link-api-gqiv.onrender.com/link/new
 Content-Type: application/json
 
 {

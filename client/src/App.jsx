@@ -15,7 +15,7 @@ function App() {
 
   //fetch the links from the api
   const getLinks = () => {
-    axios.get("http://localhost:3000/links")
+    axios.get("https://link-api-gqiv.onrender.com/links")
       .then((res) => {
         setlinks(res.data);
       })
@@ -31,7 +31,7 @@ function App() {
   //create
   const createLink = async (text, label, tags) => {
     try {
-      const response = await axios.post('http://localhost:3000/link/new', {
+      const response = await axios.post('https://link-api-gqiv.onrender.com/link/new', {
         text: text,
         label: label,
         tags: tags

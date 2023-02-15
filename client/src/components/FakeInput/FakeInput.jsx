@@ -32,12 +32,13 @@ export const FakeInput = ({ text, label, id }) => {
 
   const editLink = async (id, newText, newLabel) => {
     try {
-      const response = await axios.put(`http://localhost:3000/link/edit/${id}`,{
+      const response = await axios.put(`https://link-api-gqiv.onrender.com/link/edit/${id}`,{
         text: newText,
         label: newLabel,
       });
 
       setLinkEffect(!linkEffect)
+      setEditing(!editing)
       console.log("link edited")
       return response.data;
     } catch (error) {
