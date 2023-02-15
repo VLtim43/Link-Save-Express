@@ -135,4 +135,23 @@ function TruncateLink(link ) {
         </LinkContext.Provider>
     )
 ```
-- The
+- The **LinkComponent** displays both "link" url and the label as <p> tags. It also displays one icon for editing and deleting the component, the former changing the "setEditing" useState, who triggers the LinkWrapper to display the "fakeInput" link istead.
+- ``<Pencil size={20} onClick={() => setEditing(!editing)} />``
+- The **fakeInput** component displays both "link" url and label as a editable text input, where user can edit the present string, then submit the edited versions. 
+- Only one link can be editable at the same time. using the useState and useRef hooks, if - while editing a link - the user clicks outiside the component boundaries, it changes the "setEditing" useState again.
+```
+useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  function handleClickOutside(event) {
+    if (ref.current && !ref.current.contains(event.target)) {
+        setEditing(!editing)
+    }
+  }
+```
+
+  
