@@ -30,6 +30,19 @@ export const FakeInput = ({ text, label, id }) => {
     }
   }
 
+  const editLink = async (id, newText, newInput) => {
+    try {
+      const response = await axios.put(`https://link-save-backend.onrender.com/link/edit/${id}`,{
+        text: newText,
+      });
+
+      setLinkEffect(!linkEffect)
+      console.log("link edited")
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
  
 
     return (
@@ -39,7 +52,7 @@ export const FakeInput = ({ text, label, id }) => {
             <input type="text" value={labelValue} onChange={event => setLabelValue(event.target.value)}/>
             <div >
               <Pencil size={20} onClick={() => setEditing(!editing)} />
-              <PaperPlane size={20} onClick={() => deleteLink(id)} />
+              <PaperPlane size={20} onClick={() => editLink(id, inputValue,inputValue)} />
             </div>
           </div>
           <div>

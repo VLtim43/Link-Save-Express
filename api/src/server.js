@@ -11,15 +11,15 @@ app.use(cors());
 
 //mongoose connection
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.MONGO_URL, () => {
+mongoose.connect("mongodb+srv://admin:dW2PKXQkutyF9YZ@mongodb.kkilvks.mongodb.net/?retryWrites=true&w=majority", () => {
     console.log("Mongo connected");
 });
 
 
 //app setup
-app.listen(process.env.PORT, () =>
+app.listen(3000, () =>
   console.log(
-    `Server running on port ${process.env.PORT} - http://localhost:${process.env.PORT}`
+    `Server running on port 3000 - http://localhost:3000`
   )
 );
 

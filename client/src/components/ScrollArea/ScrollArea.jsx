@@ -9,7 +9,7 @@ export const ScrollAreaComp = ({ linkArray }) => (
     <ScrollArea.Root className="ScrollAreaRoot">
         <ScrollArea.Viewport className="ScrollAreaViewport">
             {linkArray.map((link) => (
-                <LinkWrapper link={link}/>
+                <LinkWrapper key={link._id} link={link}/>
             ))}
         </ScrollArea.Viewport>
         <ScrollArea.Scrollbar className="ScrollAreaScrollbar" orientation="vertical">
