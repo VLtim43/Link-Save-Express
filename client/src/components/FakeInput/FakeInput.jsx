@@ -53,7 +53,7 @@ export const FakeInput = ({ text, label, id }) => {
             <input type="text" value={labelValue} onChange={event => setLabelValue(event.target.value)}/>
             <div >
               <Pencil size={20} onClick={() => setEditing(!editing)} />
-              <PaperPlane size={20} onClick={() => editLink(id, inputValue,inputValue)} />
+              <PaperPlane size={20} onClick={() => editLink(id, inputValue,labelValue)} />
             </div>
           </div>
           <div>

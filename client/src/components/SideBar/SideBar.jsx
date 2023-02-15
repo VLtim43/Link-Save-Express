@@ -14,6 +14,7 @@ export const SideBar = ({ title }) => {
                 
                 <div className='delete'>
                     <Alert/>
+                    <p>Delete All</p>
                 </div>
             </div>
         </div>
