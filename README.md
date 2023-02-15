@@ -18,6 +18,8 @@
 - ``node src/server.js`` to start the server
 
 
+## Content
+
 Using mongoose to create a connection between MongoDB and the Node.js JavaScript runtime 
 ```
 mongoose.set("strictQuery", false);
@@ -59,8 +61,11 @@ Express.js API with the following routes:
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 - ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 - ![Axios](https://img.shields.io/badge/axios-864196?style=for-the-badge&logo=expo&logoColor=white)
-- Radix.UI
 - ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+## Notable libraries
+- Radix.UI for displaying alert and dialog boxes
+- Phospor-Icons for general icons
 
 
 ## Setup
@@ -68,6 +73,28 @@ Express.js API with the following routes:
 - ``npm run dev`` for test dev
 - ``npm run build`` for final building
 
+## Content
+
+``App.jsx`` main file, importing all components
+
+```
+return (
+    <div className="App">
+      <AppContext.Provider value={[linkEffect, setLinkEffect]}>
+      <SideBar title="Project" />
+      <div className="main">
+          <HeaderComponent createLink={createLink} />
+          <div className="scrollabe-area">
+            <ScrollAreaComp linkArray={links} />
+          </div>
+      </div>
+      </AppContext.Provider>
+    </div>
+  )
+```
 
 
+- All component's scss stylesheets are imported to the main ``global.scss`` file, then compiled into the ``globa.css`` file
+- Are used SCSS variables to share the same colors and media queries between all stylesheets
+- The ``sidebad.jsx`` component displays the side bar, and the "trash" button who delete ALL links. When clicked, a alert pop-up appears aksing the user if he is SURE he wants to delete ALL links(this action cannot be undone). If yes, then all links are erased
 
