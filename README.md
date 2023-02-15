@@ -153,5 +153,6 @@ useEffect(() => {
     }
   }
 ```
+- Both backend and fronted are hotes on render.com
 
   
