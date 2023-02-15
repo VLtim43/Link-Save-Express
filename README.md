@@ -96,5 +96,7 @@ return (
 
 - All component's scss stylesheets are imported to the main ``global.scss`` file, then compiled into the ``globa.css`` file
 - Are used SCSS variables to share the same colors and media queries between all stylesheets
-- The ``sidebad.jsx`` component displays the side bar, and the "trash" button who delete ALL links. When clicked, a alert pop-up appears aksing the user if he is SURE he wants to delete ALL links(this action cannot be undone). If yes, then all links are erased
+- The "linkEffect" useState hook is shared to all components using the useContext hook. This value triggers the useEffect hook to re-render all links whenever a link is created, edited or deleted
+- `` <AppContext.Provider value={[linkEffect, setLinkEffect]}> ``
+- The ``sidebad.jsx`` component displays the side bar, and the "trash" button that delete ALL links. When clicked, a alert pop-up appears aksing the user if he is SURE he wants to delete ALL links(this action cannot be undone). If yes, then all links are erased
 
