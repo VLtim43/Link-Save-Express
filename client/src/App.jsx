@@ -52,7 +52,7 @@ function App() {
 
 
   return (
-    <div className="App">´
+    <div className="App">
       <AppContext.Provider value={[linkEffect, setLinkEffect]}>
       <SideBar title="Project" />
 

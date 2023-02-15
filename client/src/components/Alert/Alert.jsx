@@ -11,7 +11,7 @@ export const Alert = () => {
     //delete All
     const deleteAll = async () => {
         try {
-            const response = await axios.delete(`https://link-api-gqiv.onrender.com/deleteALL`);
+            const response = await axios.delete(`https://link-api-gqiv.onrender.com/link/deleteALL`);
             setLinkEffect(!linkEffect)
             return response.data;
         } catch (error) {
