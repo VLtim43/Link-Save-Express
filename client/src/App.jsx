@@ -7,7 +7,14 @@ import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent";
 export const AppContext = createContext()
 
 
+
 function App() {
+
+  if (localStorage.getItem("firstTime") == null) {
+    alert(`The backend of this project is hosted as a free web service at render.com. It is automatically spun down after 15 minutes of inactivity. When a new request comes in, Render spins it up again, and it can take up to ~30 seconds for the intial boot, so you may have to wait a little 😔`);
+    localStorage.setItem("firstTime", true);
+  }
+
 
   const [linkEffect, setLinkEffect] = useState(true);
   const [links, setlinks] = useState([]);
@@ -15,7 +22,7 @@ function App() {
 
   //fetch the links from the api
   const getLinks = () => {
-    axios.get("https://link-save-backend.onrender.com/links")
+    axios.get("https://link-api-gqiv.onrender.com/links")
       .then((res) => {
         setlinks(res.data);
       })
@@ -31,7 +38,7 @@ function App() {
   //create
   const createLink = async (text, label, tags) => {
     try {
-      const response = await axios.post('https://link-save-backend.onrender.com/link/new', {
+      const response = await axios.post('https://link-api-gqiv.onrender.com/link/new', {
         text: text,
         label: label,
         tags: tags

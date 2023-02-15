@@ -11,7 +11,7 @@ app.use(cors());
 
 //mongoose connection
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://admin:dW2PKXQkutyF9YZ@mongodb.kkilvks.mongodb.net/?retryWrites=true&w=majority", () => {
+mongoose.connect(process.env.MONGO_URL, () => {
     console.log("Mongo connected");
 });
 
@@ -77,6 +77,7 @@ app.delete("/link/delete/:id", async (req, res) => {
 app.put("/link/edit/:id", async (req, res) => {
   const link = await Link.findByIdAndUpdate(req.params.id, {
     text: req.body.text,
+    label: req.body.label
   }, {new: true});
 
   if (!link) return res.status(404).send("Link not found.");
