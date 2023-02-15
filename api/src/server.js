@@ -11,7 +11,7 @@ app.use(cors());
 
 //mongoose connection
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://admin:dW2PKXQkutyF9YZ@mongodb.kkilvks.mongodb.net/?retryWrites=true&w=majority", () => {
+mongoose.connect(process.env.MONGO_URL, () => {
     console.log("Mongo connected");
 });
 
