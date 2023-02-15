@@ -1,10 +1,23 @@
 # Link-Save-Express
 
+# Backend
+
+##Stack
+- Node.js(Javascript)
+- Express.js
+- MongoDB
+- Mongoose
+
+#Setup
+- ``git clone`` clonar o projeto
+- ``cd api`` e ``npm i`` para o build inicial
+- criar um arquivo ``.env`` com a variável **MONGO_URL** apontando para o link de conexão com o seu cluster no mongoDB atlas 
+- ``MONGO_URL = <sua url de conexão>`` (Para mais informações: https://www.mongodb.com/docs/atlas/tutorial/connect-to-your-cluster/)
+
+
 
 Usando o mongoose para fazer a conexão entre o mongoDB e o node.js
-
 ```
-//mongoose connection 
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URL, () => {
 console.log("Mongo connected");
