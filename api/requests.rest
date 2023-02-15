@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/link/delete/63e3e08a382f2f0469c42192
+DELETE http://localhost:3000/link/delete/
 
 //delete ALL
 ###
@@ -19,9 +19,10 @@ DELETE http://localhost:3000/link/deleteALL
 
 
 ###
-PUT http://localhost:3000/link/edit/63e82919d70db91c7041ddf7
+PUT http://localhost:3000/link/edit/63ed0d2e14e8ae66baad173f
 Content-Type: application/json
 
 {
-    "text": "test 3"
+    "text": "test 3",
+    "label": "teste 4"
 }

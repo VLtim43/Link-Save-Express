@@ -30,10 +30,11 @@ export const FakeInput = ({ text, label, id }) => {
     }
   }
 
-  const editLink = async (id, newText, newInput) => {
+  const editLink = async (id, newText, newLabel) => {
     try {
       const response = await axios.put(`http://localhost:3000/link/edit/${id}`,{
         text: newText,
+        label: newLabel,
       });
 
       setLinkEffect(!linkEffect)
