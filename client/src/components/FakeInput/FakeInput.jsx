@@ -32,7 +32,7 @@ export const FakeInput = ({ text, label, id }) => {
 
   const editLink = async (id, newText, newInput) => {
     try {
-      const response = await axios.put(`https://link-save-backend.onrender.com/link/edit/${id}`,{
+      const response = await axios.put(`http://localhost:3000/link/edit/${id}`,{
         text: newText,
       });
 

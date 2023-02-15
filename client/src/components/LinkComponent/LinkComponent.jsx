@@ -14,7 +14,7 @@ export const LinkComponent = ({ text, label, id }) => {
   //delete link
   const deleteLink = async (id) => {
     try {
-      const response = await axios.delete(`https://link-save-backend.onrender.com/link/delete/${id}`);
+      const response = await axios.delete(`http://localhost:3000/link/delete/${id}`);
 
       setLinkEffect(!linkEffect)
       return response.data;
