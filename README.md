@@ -103,4 +103,16 @@ return (
 - The "Link" is required, but the "Label" is optional. The button will not be clickable if the "Link" input is empty.
 - The **scroll area** component is the main area, where the links are displayed. After a certain quantity of links, it enables a scroll bar to view all links.
 - The "links" are fetched from the API as an array. The array is mapped and for each link a "Linkwrapper" component is created inside the scroll area
-- The Scroll
+- The **LinkWrapper** component can return the 2 ways the "link" can be displayed, and shares the useState responsible for choosing which one displays. It also contains a funcion to truncate given link if it is too long, adding "..." at the end.
+```
+ return (
+        <LinkContext.Provider value={[editing, setEditing]}>
+            {editing ?
+             <LinkComponent text={TruncateLink(link.text)} label={link.label} key={link._id} id={link._id} editing={setEditing}
+            /> : 
+             <FakeInput text={TruncateLink(link.text)} label={link.label} key={link._id} id={link._id} editing={setEditing}
+            />}
+        </LinkContext.Provider>
+    )
+```
+- The
