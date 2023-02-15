@@ -63,5 +63,11 @@ Express.js API with the following routes:
 - ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 
+## Setup
+- ``cd client`` and ``npm i`` for the initial build
+- ``npm run dev`` for test dev
+- ``npm run build`` for final building
+
+
 
 
