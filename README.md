@@ -101,3 +101,6 @@ return (
 - The **sidebar** component displays the sidebar, and the "trash" button that delete ALL links. When clicked, a alert pop-up appears aksing the user if he is SURE he wants to delete ALL links(this action cannot be undone). If yes, then all links are erased
 - The **header** component displays 2 text inputs(for the link itself and the label) and a button to submit and create a new link.
 - The "Link" is required, but the "Label" is optional. The button will not be clickable if the "Link" input is empty.
+- The **scroll area** component is the main area, where the links are displayed. After a certain quantity of links, it enables a scroll bar to view all links.
+- The "links" are fetched from the API as an array. The array is mapped and for each link a "Linkwrapper" component is created inside the scroll area
+- The Scroll
